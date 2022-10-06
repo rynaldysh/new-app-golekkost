@@ -83,7 +83,7 @@
                     android:layout_height="@dimen/_10sdp"
                     android:tint="@color/black"
                     android:src="@drawable/beranda_location"
-                    android:layout_gravity="center_vertical"/>
+                    android:layout_marginTop="@dimen/_4sdp"/>
 
                 <TextView
                     android:id="@+id/tvLokasiKategoriBarang"
@@ -93,7 +93,7 @@
                     android:textSize="@dimen/_10ssp"
                     android:textColor="@color/black"
                     android:textAlignment="inherit"
-                    android:layout_gravity="center_vertical"/>
+                    android:layout_marginStart="@dimen/_3sdp"/>
 
             </LinearLayout>
 
