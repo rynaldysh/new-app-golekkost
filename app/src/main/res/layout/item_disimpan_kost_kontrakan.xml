@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/layoutDisimpanKostKontrakan"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_110sdp"
+    android:backgroundTint="@color/primary_color"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginVertical="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxItemDisimpanKostKontrakan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+            <ImageView
+                android:id="@+id/ivItemDisimpanKostKontrakan"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/beranda_ex_kostt"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvNamaItemDisimpanKostKontrakan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:ellipsize="marquee"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="Nama Item Disimpan Jasa"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/tvLokasiItemDisimpanKostKontrakan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:ellipsize="marquee"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/tvHargaItemDisimpanKostKontrakan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:ellipsize="marquee"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/ivDeleteItemDisimpanKostKontrakan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/button_delete" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

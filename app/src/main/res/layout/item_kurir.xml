@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layoutPengiriman"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp">
+
+        <RadioButton
+            android:id="@+id/rbPengiriman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="false"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNamaPengiriman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JNE Reguler"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"/>
+
+            <TextView
+                android:id="@+id/tvLamaPengiriman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 Hari Kerja"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tvHargaPengiriman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp10.000"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvBeratPengiriman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Kilogram x Rp10.000"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:background="#EAEAEA"/>
+
+</LinearLayout>
