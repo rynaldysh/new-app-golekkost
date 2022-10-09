@@ -71,12 +71,12 @@ class BerandaFragment : Fragment() {
 
         mcBarang.setOnClickListener {
             startActivity(Intent(requireActivity(), KategoriBarangActivity::class.java))
-            Animatoo.animateSlideUp(requireActivity())
+            /*Animatoo.animateSlideUp(requireActivity())*/
         }
 
         mcJasaangkut.setOnClickListener {
             startActivity(Intent(requireActivity(), KategoriJasaangkutActivity::class.java))
-            Animatoo.animateSlideUp(requireActivity())
+            /*Animatoo.animateSlideUp(requireActivity())*/
         }
     }
 
