@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.webkit.WebView
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.gson.Gson
@@ -12,7 +14,6 @@ import com.mavendra.golekkostv3.R
 import com.mavendra.golekkostv3.app.Constants.barang_url
 import com.mavendra.golekkostv3.helper.Helper
 import com.mavendra.golekkostv3.model.Barang
-import com.mavendra.golekkostv3.model.Transaksi
 import com.mavendra.golekkostv3.room.MyDatabase
 import com.squareup.picasso.Picasso
 import io.reactivex.Observable
@@ -27,6 +28,9 @@ class DetailBarangActivity : AppCompatActivity() {
 
     var barang = Barang()
 
+    private lateinit var webView: WebView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_barang)
@@ -38,6 +42,7 @@ class DetailBarangActivity : AppCompatActivity() {
 
         getInfo(barang)
         mainButton()
+        buttonWa(barang)
         checkKeranjang()
         Helper().setToolbar(this, toolbarKeranjangAtas, barang.name)
 
@@ -60,6 +65,27 @@ class DetailBarangActivity : AppCompatActivity() {
             val intent = Intent("event:keranjang")
             LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
             onBackPressed()
+        }
+    }
+    private val URL = "https://wa.me/"
+    private fun buttonWa(barang: Barang){
+        val ivWhatsapp: ImageView = findViewById(R.id.ivWhatsapp)
+        ivWhatsapp.setOnClickListener {
+
+            /*val webIntent: Intent = Uri.parse("https://wa.me/6282138125561").let { webpage ->
+                Intent(Intent.ACTION_VIEW, webpage)
+            }
+            startActivity(webIntent)*/
+
+            //------------------------//
+
+            webView = findViewById(R.id.web)
+
+            webView.apply {
+                loadUrl(URL + barang.harga)
+            }
+
+
         }
     }
 

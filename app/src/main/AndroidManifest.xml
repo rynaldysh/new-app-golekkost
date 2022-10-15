@@ -61,9 +61,6 @@
         <activity android:name=".activity.DetailPesanKostkontrakanActivity" />
         <activity android:name=".activity.JualBarangActivity" />
         <activity android:name=".activity.UploadFotoBarangActivity" />
-        <activity android:name=".activity.BuatDataBarangActivity" />
-        <activity android:name=".activity.InputJualBarangActivity" />
-        <activity android:name=".activity.UploadFotoBarang2Activity" />
         <activity android:name=".activity.RiwayatJualBarangActivity" />
         <activity android:name=".activity.DetailJualBarangActivity" />
         <activity android:name=".activity.KategoriBarangActivity" />
