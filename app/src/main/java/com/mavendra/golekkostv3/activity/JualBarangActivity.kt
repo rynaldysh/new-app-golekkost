@@ -40,12 +40,22 @@ class JualBarangActivity : BaseActivity() {
 
     fun uploadData(){
         val user = SharedPref(this).getUser()!!
+        val name_pemilik = etNamaPemilikBuatBarang.text.toString().trim()
+        val notelfon = etNotelfonBuatBarang.text.toString().trim()
         val name = etNamaBarang.text.toString().trim()
         val harga = etHargaBarang.text.toString().trim()
         val lokasi = etAlamatAsalPesanJasa.text.toString().trim()
         val deskripsi = etDeskripsiBarang.text.toString().trim()
 
-        if (name.isEmpty()){
+        if (name_pemilik.isEmpty()){
+            etNamaPemilikBuatBarang.error = "Kolom nama barang tidak boleh kosong"
+            etNamaPemilikBuatBarang.requestFocus()
+            return
+        } else if (notelfon.isEmpty()){
+            etNotelfonBuatBarang.error = "Kolom nama barang tidak boleh kosong"
+            etNotelfonBuatBarang.requestFocus()
+            return
+        } else if (name.isEmpty()){
             etNamaBarang.error = "Kolom nama barang tidak boleh kosong"
             etNamaBarang.requestFocus()
             return
@@ -63,7 +73,7 @@ class JualBarangActivity : BaseActivity() {
             return
         }
 
-        ApiConfig.instanceRetrofit.uploadbarang(user_id = user.id, name, harga, lokasi, deskripsi).enqueue(object :
+        ApiConfig.instanceRetrofit.uploadbarang(user_id = user.id, name_pemilik, notelfon, name, harga, lokasi, deskripsi).enqueue(object :
             Callback<ResponModel> {
 
             override fun onFailure(call: Call<ResponModel>, t: Throwable) {

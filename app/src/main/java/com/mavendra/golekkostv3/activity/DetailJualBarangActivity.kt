@@ -137,6 +137,7 @@ class DetailJualBarangActivity : BaseActivity() {
     private fun getInfo() {
 
         //set Value
+        tvNamaPemilikJualBarang.text = barang.name_pemilik
         tvNamaJualBarang.text = barang.name
         tvHargaJualBarang.text = Helper().gantiRupiah(barang.harga)
         tvKodeInputJualBarang.text = barang.kode_input_barang
@@ -158,5 +159,7 @@ class DetailJualBarangActivity : BaseActivity() {
         onBackPressed()
         return super.onSupportNavigateUp()
     }
+
+
 
 }

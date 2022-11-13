@@ -45,6 +45,8 @@ interface ApiService {
     @POST("barang/uploadbarang")
     fun uploadbarang(
         @Field("user_id") user_id: Int,
+        @Field("name_pemilik") name_pemilik:String,
+        @Field("notelfon") notelfon:String,
         @Field("name") name:String,
         @Field("harga") harga:String,
         @Field("lokasi") lokasi:String,

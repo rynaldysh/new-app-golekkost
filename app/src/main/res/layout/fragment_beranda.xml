@@ -42,7 +42,8 @@
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
                             app:cardCornerRadius="@dimen/_5sdp"
-                            android:layout_gravity="center">
+                            android:layout_gravity="center"
+                            android:background="@color/white">
 
                             <ImageView
                                 android:layout_width="@dimen/_30sdp"
@@ -75,7 +76,8 @@
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
                             app:cardCornerRadius="@dimen/_5sdp"
-                            android:layout_gravity="center">
+                            android:layout_gravity="center"
+                            android:background="@color/white">
 
                             <ImageView
                                 android:layout_width="@dimen/_30sdp"
@@ -127,8 +129,8 @@
 
         <include
             layout="@layout/view_jual_barang"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_marginHorizontal="@dimen/_15sdp"

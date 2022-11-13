@@ -21,6 +21,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_detail_barang.*
+import kotlinx.android.synthetic.main.activity_detail_jual_barang.*
 import kotlinx.android.synthetic.main.toolbar_custom_bottom_barang_detail.*
 import kotlinx.android.synthetic.main.toolbar_custom_keranjang_detail.*
 
@@ -79,10 +80,8 @@ class DetailBarangActivity : AppCompatActivity() {
 
             //------------------------//
 
-            webView = findViewById(R.id.web)
-
             webView.apply {
-                loadUrl(URL + barang.harga)
+                loadUrl(URL + barang.notelfon)
             }
 
 
@@ -129,7 +128,7 @@ class DetailBarangActivity : AppCompatActivity() {
 
         //set Value
         tvNamaBarang.text = barang.name
-        tvNamaPemilik.text = barang.nama_pemilik
+        tvNamaPemilik.text = barang.name_pemilik
         tvHargaBarang.text = Helper().gantiRupiah(barang.harga)
         tvLokasiBarang.text = barang.lokasi
         tvDeskripsiBarang.text = barang.deskripsi
@@ -145,9 +144,22 @@ class DetailBarangActivity : AppCompatActivity() {
 
     }
 
+    fun checkKeterdediaan(){
+        if(barang.status != "TERSEDIA"){
+            ivKeranjang.visibility = View.GONE
+        } else {
+            ivKeranjang.visibility = View.VISIBLE
+        }
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return super.onSupportNavigateUp()
+    }
+
+    override fun onResume() {
+        checkKeterdediaan()
+        super.onResume()
     }
 
 

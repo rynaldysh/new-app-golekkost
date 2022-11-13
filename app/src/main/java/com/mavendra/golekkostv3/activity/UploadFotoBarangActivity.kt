@@ -7,6 +7,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
@@ -21,7 +22,6 @@ import com.mavendra.golekkostv3.R
 import com.mavendra.golekkostv3.app.ApiConfig
 import com.mavendra.golekkostv3.helper.Helper
 import com.mavendra.golekkostv3.model.*
-import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail_transfer.*
 import kotlinx.android.synthetic.main.activity_jual_barang.*
@@ -29,6 +29,7 @@ import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_upload_foto_barang.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
 import kotlinx.android.synthetic.main.view_upload_bukti.*
+import kotlinx.android.synthetic.main.view_upload_gambar_barang.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -37,6 +38,10 @@ import java.io.File
 class UploadFotoBarangActivity : BaseActivity() {
 
     var barang = Barang()
+
+    lateinit var imageView: ImageView
+    lateinit var btUplaod: Button
+    lateinit var btTake: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,15 +60,7 @@ class UploadFotoBarangActivity : BaseActivity() {
         btUploadGambarBarang.setOnClickListener {
             imagePick()
         }
-    }
 
-    private var launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-        if(it.resultCode == Activity.RESULT_OK){
-            val uri = it.data?.data!!
-            Log.d("TAG", "URI IMAGE: "+uri)
-            val fileUri: Uri = uri
-            dialodUpload(File(fileUri.path))
-        }
     }
 
     var alertDialog : AlertDialog? = null
@@ -96,13 +93,22 @@ class UploadFotoBarangActivity : BaseActivity() {
         alertDialog!!.show()
 
     }
-
     private fun imagePick(){
         ImagePicker.with(this)
             .crop()
             .maxResultSize(512,512)
             .createIntentFromDialog { launcher.launch(it) }
     }
+
+    private var launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        if(it.resultCode == Activity.RESULT_OK){
+            val uri = it.data?.data!!
+            Log.d("TAG", "URI IMAGE: "+uri)
+            val fileUri: Uri = uri
+            dialodUpload(File(fileUri.path))
+        }
+    }
+
 
     private fun upload(file: File){
 

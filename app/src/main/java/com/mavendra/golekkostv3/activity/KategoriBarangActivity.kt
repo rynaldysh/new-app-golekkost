@@ -20,9 +20,12 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_riwayat_belanja.*
 import kotlinx.android.synthetic.main.toolbar_beranda.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class KategoriBarangActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +49,8 @@ class KategoriBarangActivity : AppCompatActivity() {
                 }
             }
         })
+
+
     }
 
     fun displayBarang(barangs: ArrayList<Barang>) {

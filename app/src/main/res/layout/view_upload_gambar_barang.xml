@@ -42,7 +42,7 @@
             android:background="@drawable/tombol_bulat"
             android:text="Ambil Gambar"
             android:textColor="@color/white"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

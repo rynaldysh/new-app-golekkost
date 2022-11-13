@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@drawable/tombol_bulat"
-                android:text="Unggah"
+                android:text="Pilih Foto"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 

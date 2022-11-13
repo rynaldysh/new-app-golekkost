@@ -30,6 +30,51 @@
                 android:background="@drawable/bg_catatan">
 
                 <EditText
+                    android:id="@+id/etNamaPemilikBuatBarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_31sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@null"
+                    android:hint="Nama pemilik barang"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_catatan">
+
+                <EditText
+                    android:id="@+id/etNotelfonBuatBarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_31sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@null"
+                    android:hint="Nomor telfon pemilik barang"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_catatan">
+
+                <EditText
                     android:id="@+id/etNamaBarang"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_31sdp"
@@ -40,7 +85,8 @@
                     android:background="@null"
                     android:hint="Nama barang yang akan dijual"
                     android:inputType="textPersonName"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/black"/>
 
             </RelativeLayout>
 
@@ -61,7 +107,8 @@
                     android:background="@null"
                     android:hint="Harga Barang"
                     android:inputType="phone"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/black"/>
 
             </RelativeLayout>
 
@@ -83,7 +130,8 @@
                     android:hint="Alamat pemilik barang"
                     android:inputType="textMultiLine"
                     android:lines="3"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/black"/>
 
             </RelativeLayout>
 
@@ -105,13 +153,14 @@
                     android:hint="Deskripsi barang"
                     android:inputType="textMultiLine"
                     android:lines="3"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/black"/>
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_250sdp"
+                android:layout_height="@dimen/_140sdp"
                 android:layout_marginTop="@dimen/_5sdp">
 
                 <Button
