@@ -11,13 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_519sdp">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     tools:itemCount="1"
-                    tools:listitem="@layout/item_barang_detail_transfer" />
+                    tools:listitem="@layout/item_detail_pesan_jasa" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_3sdp"
-                                android:text="TUjuan"
+                                android:text="Tujuan - "
                                 android:textColor="@color/black" />
 
                             <TextView
@@ -152,34 +152,45 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
+                <LinearLayout
+                    android:id="@+id/llBawahPesanJasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_135sdp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
 
+                    <Button
+                        android:id="@+id/btSelesaiDetailPesanJasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/tombol_bayar_transaksi"
+                        android:text="Selesai"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btBatalDetailPesanJasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/tombol_batal_transaksi"
+                        android:text="Batalkan"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/llBawahPesanJasa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="@color/white"
-                android:padding="@dimen/_8sdp">
-
-                <Button
-                    android:id="@+id/btBatalDetailPesanJasa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/tombol_batal_transaksi"
-                    android:text="Batalkan Pemesanan"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold" />
 
 
-            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
 
-        </RelativeLayout>
-
-    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
 
 </LinearLayout>

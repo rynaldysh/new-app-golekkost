@@ -123,7 +123,7 @@ class KirimPemesananKostKontrakanActivity : AppCompatActivity() {
                     intent.putExtra("bokingkostkontrakan", jsPesanKostKontrakan)
 
                     startActivity(intent)
-                    Toast.makeText(this@KirimPemesananKostKontrakanActivity, "Berhasil registrasi, silahkan masuk ", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@KirimPemesananKostKontrakanActivity, "Berhasil memesan kost atau kontrakan", Toast.LENGTH_SHORT).show()
 
                 } else {
                     error(respon.message)

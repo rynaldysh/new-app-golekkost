@@ -123,6 +123,11 @@ interface ApiService {
         @Path("id") id: Int
     ): Call<ResponModel>
 
+    @POST("pesanjasa/selesai/{id}")
+    fun selesaiPesanJasa(
+        @Path("id") id: Int
+    ): Call<ResponModel>
+
     @POST("pesanjasa/batal/{id}")
     fun batalPesanJasa(
         @Path("id") id: Int
@@ -135,6 +140,11 @@ interface ApiService {
 
     @GET("pesankostkontrakan/user/{id}")
     fun getPesanKostkontrakan(
+        @Path("id") id: Int
+    ): Call<ResponModel>
+
+    @POST("pesankostkontrakan/selesai/{id}")
+    fun selesaiPesankostkontrakan(
         @Path("id") id: Int
     ): Call<ResponModel>
 

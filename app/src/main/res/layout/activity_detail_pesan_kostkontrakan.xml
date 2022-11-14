@@ -126,6 +126,17 @@
                     android:padding="@dimen/_8sdp">
 
                     <Button
+                        android:id="@+id/btSelesaiDetailPesanKostkontrakan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/tombol_bayar_transaksi"
+                        android:text="Selesai"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <Button
                         android:id="@+id/btBatalDetailPesanKostkontrakan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

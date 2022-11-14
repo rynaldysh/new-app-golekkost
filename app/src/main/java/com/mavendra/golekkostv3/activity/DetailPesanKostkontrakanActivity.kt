@@ -55,6 +55,21 @@ class DetailPesanKostkontrakanActivity : AppCompatActivity() {
                     it.dismissWithAnimation()
                 }.show()
         }
+
+        btSelesaiDetailPesanKostkontrakan.setOnClickListener {
+            SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("Apakah anda yakin?")
+                .setContentText("Pemesanan sudah diselesaikan!")
+                .setConfirmText("Ya, selesai!")
+                .setConfirmClickListener {
+                    it.dismissWithAnimation()
+                    selesaiCheckout()
+                }
+                .setCancelText("Tutup")
+                .setCancelClickListener {
+                    it.dismissWithAnimation()
+                }.show()
+        }
     }
 
     fun batalCheckout(){
@@ -84,6 +99,40 @@ class DetailPesanKostkontrakanActivity : AppCompatActivity() {
                     Toast.makeText(this@DetailTransferActivity, "Transfer berhasil dibatalkan", Toast.LENGTH_SHORT).show()
                     onBackPressed()
                     *//*displayRiwayat(res.transaksis)*/
+                } else {
+                    error(res.message)
+                }
+            }
+        })
+    }
+
+    fun selesaiCheckout(){
+        val loading = SweetAlertDialog(this@DetailPesanKostkontrakanActivity, SweetAlertDialog.PROGRESS_TYPE)
+        loading.setTitleText("Memuat...").show()
+        ApiConfig.instanceRetrofit.selesaiPesankostkontrakan(pesankostkontrakan.id).enqueue(object :
+            Callback<ResponModel> {
+            override fun onFailure(call: Call<ResponModel>, t: Throwable) {
+                loading.dismiss()
+                error(t.message.toString())
+            }
+
+            override fun onResponse(call: Call<ResponModel>, response: Response<ResponModel>) {
+                loading.dismiss()
+                val res = response.body()!!
+                if (res.success == 1){
+
+                    SweetAlertDialog(this@DetailPesanKostkontrakanActivity, SweetAlertDialog.SUCCESS_TYPE)
+                        .setTitleText("Berhasil")
+                        .setContentText("Pemesanan berhasil diselesaikan")
+                        .setConfirmClickListener {
+                            it.dismissWithAnimation()
+                            onBackPressed()
+                        }.show()
+
+                    /*
+                        Toast.makeText(this@DetailTransferActivity, "Transfer berhasil dibatalkan", Toast.LENGTH_SHORT).show()
+                        onBackPressed()
+                        *//*displayRiwayat(res.transaksis)*/
                 } else {
                     error(res.message)
                 }
