@@ -137,7 +137,7 @@ class PengirimanActivity : AppCompatActivity() {
         }
 
         val checkout = CheckOut()
-        checkout.user_id = "" + user.id
+        checkout.usergeneral_id = "" + user.id
         checkout.total_item = "" + totalItem
         checkout.total_harga = "" + totalHarga
         checkout.name = a.name

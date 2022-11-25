@@ -44,7 +44,7 @@ interface ApiService {
     @FormUrlEncoded
     @POST("barang/uploadbarang")
     fun uploadbarang(
-        @Field("user_id") user_id: Int,
+        @Field("usergeneral_id") usergeneral_id: Int,
         @Field("name_pemilik") name_pemilik:String,
         @Field("notelfon") notelfon:String,
         @Field("name") name:String,

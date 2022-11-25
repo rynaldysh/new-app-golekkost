@@ -1,7 +1,7 @@
 package com.mavendra.golekkostv3.model
 
 class CheckOut {
-    lateinit var user_id: String
+    lateinit var usergeneral_id: String
     lateinit var total_item: String
     lateinit var total_harga: String
     lateinit var name: String

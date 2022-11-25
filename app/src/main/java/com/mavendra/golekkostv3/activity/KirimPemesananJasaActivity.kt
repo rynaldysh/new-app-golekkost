@@ -94,7 +94,7 @@ class KirimPemesananJasaActivity : AppCompatActivity() {
         }
 
             val pesanJasa = CheckoutPesanJasa()
-            pesanJasa.user_id = "" + user.id
+            pesanJasa.usergeneral_id = "" + user.id
             pesanJasa.name = a.name
             pesanJasa.tanggal = a.tanggal
             pesanJasa.phone = a.phone

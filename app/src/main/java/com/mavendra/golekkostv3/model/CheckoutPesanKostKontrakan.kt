@@ -1,7 +1,7 @@
 package com.mavendra.golekkostv3.model
 
 class CheckoutPesanKostKontrakan {
-    lateinit var user_id: String
+    lateinit var usergeneral_id: String
     lateinit var name: String
     lateinit var tanggal: String
     lateinit var phone: String

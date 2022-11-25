@@ -91,7 +91,7 @@
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_riwayat_barang_sendiri.xml" value="0.2953703703703704" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_riwayat_belanja.xml" value="0.24166666666666667" />
-        <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_riwayat_jual_barang.xml" value="0.25" />
+        <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_riwayat_jual_barang.xml" value="0.33" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_riwayat_pesan_jasa.xml" value="0.2953125" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_riwayat_pesan_kost_kontrakan.xml" value="0.203125" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_riwayat_pesan_kostkontrakan.xml" value="0.2786458333333333" />
@@ -181,6 +181,7 @@
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/toolbar_custom_keranjang.xml" value="0.22" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/toolbar_custom_keranjang_detail.xml" value="0.33" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/toolbar_custom_top_jasa_detail.xml" value="0.33" />
+        <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/toolbar_custom_top_jual_barang.xml" value="0.303125" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/toolbar_custom_top_kost_kontrakan_detail.xml" value="0.21354166666666666" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/toolbar_custom_top_simpan_jasa_detail.xml" value="0.246875" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/view_jual_barang.xml" value="1.0" />

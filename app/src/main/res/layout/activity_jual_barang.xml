@@ -85,8 +85,8 @@
                     android:background="@null"
                     android:hint="Nama barang yang akan dijual"
                     android:inputType="textPersonName"
-                    android:textSize="@dimen/_14ssp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
 
             </RelativeLayout>
 
@@ -106,9 +106,9 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@null"
                     android:hint="Harga Barang"
-                    android:inputType="phone"
-                    android:textSize="@dimen/_14ssp"
-                    android:textColor="@color/black"/>
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
 
             </RelativeLayout>
 

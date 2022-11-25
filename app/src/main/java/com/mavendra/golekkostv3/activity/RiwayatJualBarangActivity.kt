@@ -3,26 +3,28 @@ package com.mavendra.golekkostv3.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.mavendra.golekkostv3.R
-import com.mavendra.golekkostv3.adapter.RiwayatAdapter
 import com.mavendra.golekkostv3.adapter.RiwayatJualBarangAdapter
 import com.mavendra.golekkostv3.app.ApiConfig
 import com.mavendra.golekkostv3.helper.Helper
 import com.mavendra.golekkostv3.helper.SharedPref
 import com.mavendra.golekkostv3.model.Barang
 import com.mavendra.golekkostv3.model.ResponModel
-import com.mavendra.golekkostv3.model.Transaksi
 import kotlinx.android.synthetic.main.activity_riwayat_belanja.*
 import kotlinx.android.synthetic.main.activity_riwayat_jual_barang.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
+import kotlinx.android.synthetic.main.toolbar_custom_top_jual_barang.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
 class RiwayatJualBarangActivity : AppCompatActivity() {
+
+    var barang = Barang()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +60,16 @@ class RiwayatJualBarangActivity : AppCompatActivity() {
         })
     }
 
+    fun check(){
+        if (barang.toString().isNotEmpty()){
+            tvKosongRiwayatJualBarang.visibility = View.GONE
+            rvRiwayatJualBarang.visibility = View.VISIBLE
+        } else {
+            tvKosongRiwayatJualBarang.visibility = View.VISIBLE
+            rvRiwayatJualBarang.visibility = View.GONE
+        }
+    }
+
     fun displayRiwayat(barangs: ArrayList<Barang>) {
 
         val layoutManagerRiwayat = LinearLayoutManager(this)
@@ -77,6 +89,7 @@ class RiwayatJualBarangActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
+        check()
         getRiwayat()
         super.onResume()
     }

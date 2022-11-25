@@ -96,7 +96,7 @@ class KirimPemesananKostKontrakanActivity : AppCompatActivity() {
         }
 
             val pesanKostKontrakan = CheckoutPesanKostKontrakan()
-            pesanKostKontrakan.user_id = "" + user.id
+            pesanKostKontrakan.usergeneral_id = "" + user.id
             pesanKostKontrakan.name = a.name
             pesanKostKontrakan.tanggal = a.tanggal
             pesanKostKontrakan.phone = a.phone
