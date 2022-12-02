@@ -62,9 +62,9 @@ class RiwayatJualBarangAdapter(var data:ArrayList<Barang>, var listener: Listene
         holder.tvTanggal.text = Helper().convertDate(a.created_att, newFormat)
 
         //change color status
-        var color = context.getColor(R.color.menunggu)
+        var color = context.getColor(R.color.terjual)
         if (a.status == "TERSEDIA") color = context.getColor(R.color.tersedia)
-        else if (a.status == "TERJUAL") color = context.getColor(R.color.terjual)
+        else if (a.status == "HABIS") color = context.getColor(R.color.terjual)
 
         holder.tvStatus.setTextColor(color)
 

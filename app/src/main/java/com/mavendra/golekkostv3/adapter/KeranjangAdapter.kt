@@ -29,7 +29,6 @@ class KeranjangAdapter(var activity: Activity, var data:ArrayList<Barang>, var l
         val tvName = view.findViewById<TextView>(R.id.tvNamaItem)
         val tvHarga = view.findViewById<TextView>(R.id.tvHargaItem)
         val tvLokasi = view.findViewById<TextView>(R.id.tvLokasiItem)
-        /*val tvMayoritas = view.findViewById<TextView>(R.id.tvMayoritas)*/
         val ivItem = view.findViewById<ImageView>(R.id.ivItem)
         val layout = view.findViewById<CardView>(R.id.layoutKeranjang)
 

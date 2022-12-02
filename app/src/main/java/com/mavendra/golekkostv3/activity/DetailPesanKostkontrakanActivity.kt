@@ -16,10 +16,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog
-import kotlinx.android.synthetic.main.activity_detail_pesan_jasa.*
 import kotlinx.android.synthetic.main.activity_detail_pesan_kostkontrakan.*
 import kotlinx.android.synthetic.main.toolbar_beranda.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
+import kotlinx.android.synthetic.main.toolbar_custom_bottom_detail_kostkontrakan_pesan.*
 
 
 class DetailPesanKostkontrakanActivity : AppCompatActivity() {
@@ -30,7 +30,7 @@ class DetailPesanKostkontrakanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_pesan_kostkontrakan)
 
-        Helper().setToolbar(this, toolbarBiasa, "Riwayat Pesan Kost atau Kontrakan")
+        Helper().setToolbar(this, toolbarBiasa, "Detail Pemesanan Kost atau Kontrakan")
 
         val json = intent.getStringExtra("transaksipesankostkontrakan")
         pesankostkontrakan = Gson().fromJson(json, PesanKostkontrakan::class.java)
@@ -44,7 +44,7 @@ class DetailPesanKostkontrakanActivity : AppCompatActivity() {
         btBatalDetailPesanKostkontrakan.setOnClickListener {
             SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                 .setTitleText("Apakah anda yakin?")
-                .setContentText("Pemesanan akan dibatalkan!")
+                .setContentText("Pesanan akan dibatalkan!")
                 .setConfirmText("Ya, batalkan!")
                 .setConfirmClickListener {
                         it.dismissWithAnimation()
@@ -59,7 +59,7 @@ class DetailPesanKostkontrakanActivity : AppCompatActivity() {
         btSelesaiDetailPesanKostkontrakan.setOnClickListener {
             SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                 .setTitleText("Apakah anda yakin?")
-                .setContentText("Pemesanan sudah diselesaikan!")
+                .setContentText("Sudah diselesaikan!")
                 .setConfirmText("Ya, selesai!")
                 .setConfirmClickListener {
                     it.dismissWithAnimation()

@@ -36,8 +36,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var s:SharedPref
 
-    private var statusLogin = false
-
     private var dariDetail :Boolean = false
     private var dariDetailJasa :Boolean = false
     private var dariDetailKostkontrakan :Boolean = false

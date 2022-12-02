@@ -62,10 +62,10 @@ class DetailJualBarangActivity : BaseActivity() {
             SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                 .setTitleText("Apakah anda yakin?")
                 .setContentText("Barang anda sudah terjual? tidak dapat di ubah seperti sebelumnya!")
-                .setConfirmText("Ya, Terjual!")
+                .setConfirmText("Ya, Habis!")
                 .setConfirmClickListener {
-                        it.dismissWithAnimation()
-                        barangTerjual()
+                    it.dismissWithAnimation()
+                    barangTerjual()
                 }
                 .setCancelText("Tutup")
                 .setCancelClickListener {
@@ -91,16 +91,16 @@ class DetailJualBarangActivity : BaseActivity() {
 
                     SweetAlertDialog(this@DetailJualBarangActivity, SweetAlertDialog.SUCCESS_TYPE)
                         .setTitleText("Berhasil")
-                        .setContentText("Barang anda sudah terjual")
+                        .setContentText("Status barang anda telah berubah menjadi habis")
                         .setConfirmClickListener {
                             it.dismissWithAnimation()
                             onBackPressed()
                         }.show()
 
-                /*
-                    Toast.makeText(this@DetailTransferActivity, "Transfer berhasil dibatalkan", Toast.LENGTH_SHORT).show()
-                    onBackPressed()
-                    *//*displayRiwayat(res.transaksis)*/
+                    /*
+                        Toast.makeText(this@DetailTransferActivity, "Transfer berhasil dibatalkan", Toast.LENGTH_SHORT).show()
+                        onBackPressed()
+                        *//*displayRiwayat(res.transaksis)*/
                 } else {
                     error(res.message)
                 }

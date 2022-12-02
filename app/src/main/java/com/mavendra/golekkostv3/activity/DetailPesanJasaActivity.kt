@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_detail_pesan_jasa.*
 import kotlinx.android.synthetic.main.activity_detail_pesan_kostkontrakan.*
 import kotlinx.android.synthetic.main.toolbar_beranda.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
+import kotlinx.android.synthetic.main.toolbar_custom_bottom_detail_jasa_pesan.*
 
 
 class DetailPesanJasaActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class DetailPesanJasaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_pesan_jasa)
 
-        Helper().setToolbar(this, toolbarBiasa, "Riwayat Pesan Jasa Angkut")
+        Helper().setToolbar(this, toolbarBiasa, "Detail Pemesanan Jasa Angkut")
 
         val json = intent.getStringExtra("transaksipesanjasa")
         pesanjasa = Gson().fromJson(json, PesanJasa::class.java)
@@ -44,7 +45,7 @@ class DetailPesanJasaActivity : AppCompatActivity() {
         btBatalDetailPesanJasa.setOnClickListener {
             SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                 .setTitleText("Apakah anda yakin?")
-                .setContentText("Pemesanan akan dibatalkan!")
+                .setContentText("Pesanan akan dibatalkan!")
                 .setConfirmText("Ya, batalkan!")
                 .setConfirmClickListener {
                         it.dismissWithAnimation()

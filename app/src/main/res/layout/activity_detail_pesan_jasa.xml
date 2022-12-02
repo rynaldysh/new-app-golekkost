@@ -17,7 +17,8 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_90sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,44 +153,15 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
-                <LinearLayout
-                    android:id="@+id/llBawahPesanJasa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_135sdp"
-                    android:background="@color/white"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/btSelesaiDetailPesanJasa"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@drawable/tombol_bayar_transaksi"
-                        android:text="Selesai"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/btBatalDetailPesanJasa"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@drawable/tombol_batal_transaksi"
-                        android:text="Batalkan"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
             </LinearLayout>
 
-
-
         </androidx.core.widget.NestedScrollView>
+
+        <include
+            layout="@layout/toolbar_custom_bottom_detail_jasa_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
 
     </RelativeLayout>
 

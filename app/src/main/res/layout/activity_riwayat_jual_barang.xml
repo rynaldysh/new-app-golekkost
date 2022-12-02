@@ -53,12 +53,12 @@
         </androidx.core.widget.NestedScrollView>
 
         <include
-            layout="@layout/toolbar_custom_top_jual_barang"
+            layout="@layout/toolbar_custom_bottom_jual_barang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginHorizontal="@dimen/_30sdp"
-            android:layout_marginVertical="@dimen/_20sdp"/>
+            android:layout_marginVertical="@dimen/_20sdp" />
 
     </RelativeLayout>
 

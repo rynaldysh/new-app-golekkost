@@ -1,6 +1,7 @@
 package com.mavendra.golekkostv3.adapter
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,12 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.mavendra.golekkostv3.R
 import com.mavendra.golekkostv3.model.AlamatPesanJasa
+import com.mavendra.golekkostv3.model.Barang
+import com.mavendra.golekkostv3.room.MyDatabase
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 import kotlin.collections.ArrayList
 
 class AlamatPesanJasaAdapter(var data:ArrayList<AlamatPesanJasa>, var listener: Listeners):RecyclerView.Adapter<AlamatPesanJasaAdapter.Holder>(){
@@ -53,6 +60,7 @@ class AlamatPesanJasaAdapter(var data:ArrayList<AlamatPesanJasa>, var listener: 
             a.isSelected = true
             listener.onClicked(a)
         }
+
     }
 
     interface  Listeners{

@@ -31,7 +31,7 @@ class KirimPemesananKostKontrakanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kirim_pemesanan_kost_kontrakan)
         myDb = MyDatabase.getInstance(this)!!
-        Helper().setToolbar(this, toolbarBiasa, "Pemesanan")
+        Helper().setToolbar(this, toolbarBiasa, "Pemesanan Kost Atau Kontrakan")
 
         mainButton()
 
@@ -58,7 +58,7 @@ class KirimPemesananKostKontrakanActivity : AppCompatActivity() {
     }
 
     fun buttonPesan(){
-        if (myDb.daoAlamatPesanJasa().getByStatus(true) != null){
+        if (myDb.daoAlamatPesanKostKontrakan().getByStatus(true) != null){
             btBayarDisimpanKostKontrakan.visibility = View.VISIBLE
 
         } else {

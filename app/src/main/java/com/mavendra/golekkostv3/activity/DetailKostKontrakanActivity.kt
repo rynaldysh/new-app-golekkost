@@ -100,6 +100,7 @@ class DetailKostKontrakanActivity : AppCompatActivity() {
         tvNamaKost.text = kostkontrakan.name
         tvNamaPengelola.text = kostkontrakan.pengelola
         tvHargaKost.text = Helper().gantiRupiah(kostkontrakan.harga)
+        tvRasioPembayaranDetailKost.text = kostkontrakan.rasiobayar
         tvLokasi.text = kostkontrakan.lokasi
         tvSisaKamar.text = kostkontrakan.sisakamar
         tvTotalKamar.text = kostkontrakan.totalkamar

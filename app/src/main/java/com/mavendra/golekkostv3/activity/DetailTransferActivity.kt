@@ -44,7 +44,7 @@ class DetailTransferActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_transfer)
 
-        Helper().setToolbar(this, toolbarBiasa, "Riwayat Belanja")
+        Helper().setToolbar(this, toolbarBiasa, "Detail Belanja Barang")
 
         val json = intent.getStringExtra("transaksi")
         transaksi = Gson().fromJson(json, Transaksi::class.java)

@@ -17,6 +17,7 @@ public class Kostkontrakan implements Serializable {
     public String name;
     public String pengelola;
     public String harga;
+    public String rasiobayar;
     public String lokasi;
     public String sisakamar;
     public String totalkamar;

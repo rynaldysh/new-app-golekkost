@@ -16,7 +16,7 @@ import com.mavendra.golekkostv3.model.ResponModel
 import kotlinx.android.synthetic.main.activity_riwayat_belanja.*
 import kotlinx.android.synthetic.main.activity_riwayat_jual_barang.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
-import kotlinx.android.synthetic.main.toolbar_custom_top_jual_barang.*
+import kotlinx.android.synthetic.main.toolbar_custom_bottom_jual_barang.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

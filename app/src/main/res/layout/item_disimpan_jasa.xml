@@ -63,7 +63,7 @@
                 android:lines="1"
                 android:maxLines="1"
                 android:text="Nama Item Disimpan Jasa"
-                android:textSize="@dimen/_14ssp"
+                android:textSize="@dimen/_15ssp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
 
@@ -83,12 +83,14 @@
                 <TextView
                     android:id="@+id/tvLokasiItemDisimpanJasa"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_25sdp"
+                    android:layout_height="wrap_content"
                     android:text="masih ujicoba aja dulu, buat nama lokasi masih ujicoba aja dulu, buat nama lokasi"
-                    android:textSize="@dimen/_10ssp"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="@color/black"
                     android:textAlignment="inherit"
-                    android:layout_marginStart="@dimen/_3sdp"/>
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:maxLines="2"
+                    android:justificationMode="inter_word"/>
 
             </LinearLayout>
 
@@ -103,8 +105,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="1000000"
-                    android:textColor="@color/black" />
+                    android:text="Rp100.000.000,00"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 

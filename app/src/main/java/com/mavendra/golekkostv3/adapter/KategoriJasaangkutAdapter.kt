@@ -23,6 +23,7 @@ class KategoriJasaangkutAdapter(var data: ArrayList<Jasaangkut>, var listener: L
         val tvName = view.findViewById<TextView>(R.id.tvNamaKategoriJasaangkut)
         val tvHarga = view.findViewById<TextView>(R.id.tvHargaKategoriJasaangkut)
         val tvLokasi = view.findViewById<TextView>(R.id.tvLokasiKategoriJasaangkut)
+        val tvDeskripsi = view.findViewById<TextView>(R.id.tvDeskripsiKategoriJasaAngkut)
         val ivBarang = view.findViewById<ImageView>(R.id.ivKategoriJasaangkut)
         val layout = view.findViewById<CardView>(R.id.layoutKategoriJasaangkut)
 
@@ -44,6 +45,7 @@ class KategoriJasaangkutAdapter(var data: ArrayList<Jasaangkut>, var listener: L
         holder.tvName.text = data[position].name
         holder.tvHarga.text = NumberFormat.getCurrencyInstance(Locale("in", "ID")).format(Integer.valueOf(data[position].harga))
         holder.tvLokasi.text = data[position].lokasi
+        holder.tvDeskripsi.text = data[position].deskripsi
 
         val image =  Constants.JASAANGKUT_URL + data[position].image
         Picasso.get()

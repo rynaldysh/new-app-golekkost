@@ -14,6 +14,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_tambah_alamat_pesan_kost_kontrakan.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
+import kotlinx.android.synthetic.main.toolbar_custom_bottom_tambah_alamat_pesan_kost.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -79,10 +80,6 @@ class TambahAlamatPesanKostKontrakanActivity : AppCompatActivity() {
             }
             etAlamatPesanKostKontrakan.text.isEmpty() -> {
                 error(etAlamatPesanKostKontrakan)
-                return
-            }
-            etTypePesanKostKontrakan.text.isEmpty() -> {
-                error(etTypePesanKostKontrakan)
                 return
             }
             etTanggalPindahanPesanKostKontrakan.text.isEmpty() -> {

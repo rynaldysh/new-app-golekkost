@@ -23,6 +23,7 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_tambah_alamat.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
+import kotlinx.android.synthetic.main.toolbar_custom_bottom_tambah_alamat_checkout.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

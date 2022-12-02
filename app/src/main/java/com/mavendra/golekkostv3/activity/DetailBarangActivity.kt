@@ -79,6 +79,7 @@ class DetailBarangActivity : AppCompatActivity() {
             startActivity(webIntent)*/
 
             //------------------------//
+            webView = findViewById(R.id.web)
 
             webView.apply {
                 loadUrl(URL + barang.notelfon)

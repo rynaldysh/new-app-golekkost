@@ -68,9 +68,10 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/ivDeleteAlamatPesanJasa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/profile_edit"
+            android:src="@drawable/button_delete"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/_5sdp"/>
 

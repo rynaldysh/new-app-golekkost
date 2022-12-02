@@ -22,6 +22,7 @@ class KategoriBarangAdapter(var data: ArrayList<Barang>,  var listener: Listener
         val tvName = view.findViewById<TextView>(R.id.tvNamaKategoriBarang)
         val tvHarga = view.findViewById<TextView>(R.id.tvHargaKategoriBarang)
         val tvLokasi = view.findViewById<TextView>(R.id.tvLokasiKategoriBarang)
+        val tvDeskripsi = view.findViewById<TextView>(R.id.tvDeskripsiKategoriBarang)
         val ivBarang = view.findViewById<ImageView>(R.id.ivKategoriBarang)
         val tvStatus = view.findViewById<TextView>(R.id.tvStatusKategoriBarang)
         val layout = view.findViewById<CardView>(R.id.layoutKategoriBarang)
@@ -45,13 +46,14 @@ class KategoriBarangAdapter(var data: ArrayList<Barang>,  var listener: Listener
         holder.tvName.text = data[position].name
         holder.tvHarga.text = NumberFormat.getCurrencyInstance(Locale("in", "ID")).format(Integer.valueOf(data[position].harga))
         holder.tvLokasi.text = data[position].lokasi
+        holder.tvDeskripsi.text = data[position].deskripsi
         holder.tvStatus.text = data[position].status
 
-        var color = context.getColor(R.color.menunggu)
+        var color = context.getColor(R.color.terjual)
 
         when (data[position].status) {
             "TERSEDIA" -> color = context.getColor(R.color.tersedia)
-            "TERJUAL" -> color = context.getColor(R.color.terjual)
+            "HABIS" -> color = context.getColor(R.color.terjual)
         }
 
         holder.tvStatus.setBackgroundColor(color)

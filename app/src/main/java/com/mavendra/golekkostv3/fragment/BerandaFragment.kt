@@ -10,7 +10,6 @@ import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.mavendra.golekkostv3.R
 import com.mavendra.golekkostv3.activity.KategoriBarangActivity
 import com.mavendra.golekkostv3.activity.KategoriJasaangkutActivity

@@ -13,10 +13,10 @@ import com.mavendra.golekkostv3.R
 class WalkthroughAdapter(val context: Context): PagerAdapter(){
 
     val imgArray: IntArray = intArrayOf(R.drawable.wh_rumah, R.drawable.wh_jual_beli_barang, R.drawable.wh_jasa_angkut)
-    val titleArray: Array<String> = arrayOf("Informasi              Kost/Kontrakan",
+    val titleArray: Array<String> = arrayOf("Informasi" + "               Kost/Kontrakan",
         "Jual-Beli Perabotan Kost/Kontrakan", "Informasi Jasa Angkut/Pindahan")
-    val descArray: Array<String> = arrayOf("Usergeneral bisa mendapatkan informasi terkait kost/kontrakan",
-        "Usergeneral dapat menjual/membeli perabotan kost/kontrakan", "Usergeneral bisa mendapatkan jasa angkut/pindahan")
+    val descArray: Array<String> = arrayOf("Pengguna bisa mendapatkan informasi terkait kost/kontrakan",
+        "Pengguna dapat menjual/membeli perabotan kost/kontrakan", "Pengguna bisa mendapatkan informasi terkait jasa angkut/pindahan")
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
         return view == `object`

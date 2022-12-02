@@ -7,8 +7,13 @@ import com.google.gson.Gson
 import com.mavendra.golekkostv3.MainActivity
 import com.mavendra.golekkostv3.R
 import com.mavendra.golekkostv3.helper.Helper
+import com.mavendra.golekkostv3.model.Barang
 import com.mavendra.golekkostv3.model.CheckoutPesanJasa
 import com.mavendra.golekkostv3.room.MyDatabase
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_succes_jasa.*
 import kotlinx.android.synthetic.main.activity_succes_kost_kontrakan.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*

@@ -30,7 +30,7 @@ class KirimPemesananJasaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kirim_pemesanan_jasa)
         myDb = MyDatabase.getInstance(this)!!
-        Helper().setToolbar(this, toolbarBiasa, "Pemesanan")
+        Helper().setToolbar(this, toolbarBiasa, "Pemesanan Jasa Angkut")
 
         mainButton()
 

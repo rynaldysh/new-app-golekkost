@@ -25,8 +25,10 @@ class KostKontrakanAdapter(var activity: Activity, var data:ArrayList<Kostkontra
     class Holder(view: View):RecyclerView.ViewHolder(view){
         val tvName = view.findViewById<TextView>(R.id.tvNameKost)
         val tvHarga = view.findViewById<TextView>(R.id.tvHargaKost)
+        val tvRasio = view.findViewById<TextView>(R.id.tvRasioPembayaranKost)
         val tvLokasi = view.findViewById<TextView>(R.id.tvLokasiKost)
         val tvMayoritas = view.findViewById<TextView>(R.id.tvMayoritas)
+        val tvDeskripsi = view.findViewById<TextView>(R.id.tvDeskripsiKost)
         val ivKost = view.findViewById<ImageView>(R.id.ivKost)
         val layout = view.findViewById<CardView>(R.id.layoutKos)
 
@@ -46,8 +48,10 @@ class KostKontrakanAdapter(var activity: Activity, var data:ArrayList<Kostkontra
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.tvName.text = data[position].name
         holder.tvHarga.text = NumberFormat.getCurrencyInstance(Locale("in", "ID")).format(Integer.valueOf(data[position].harga))
+        holder.tvRasio.text = data[position].rasiobayar
         holder.tvLokasi.text = data[position].lokasi
         holder.tvMayoritas.text = data[position].mayoritas
+        holder.tvDeskripsi.text = data[position].deskripsi
         //holder.ivKost.setImageResource(data[position].image)
 
         var color = context.getColor(R.color.mahasiswa)
