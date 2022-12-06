@@ -229,7 +229,6 @@ class DetailTransferActivity : BaseActivity() {
         rvBarangDetailTransfer.adapter = BarangTransaksiAdapter(transaksis)
         rvBarangDetailTransfer.layoutManager = layoutManagerRiwayat
 
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

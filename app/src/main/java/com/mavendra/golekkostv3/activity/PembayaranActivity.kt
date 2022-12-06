@@ -11,10 +11,7 @@ import com.mavendra.golekkostv3.R
 import com.mavendra.golekkostv3.adapter.BankAdapter
 import com.mavendra.golekkostv3.app.ApiConfig
 import com.mavendra.golekkostv3.helper.Helper
-import com.mavendra.golekkostv3.model.Bank
-import com.mavendra.golekkostv3.model.CheckOut
-import com.mavendra.golekkostv3.model.ResponModel
-import com.mavendra.golekkostv3.model.Transaksi
+import com.mavendra.golekkostv3.model.*
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog
 import kotlinx.android.synthetic.main.activity_pembayaran.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*

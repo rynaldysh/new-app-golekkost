@@ -1,27 +1,19 @@
 package com.mavendra.golekkostv3.activity
 
 import android.annotation.SuppressLint
-import android.app.Activity
-import android.app.AlertDialog
-import android.net.Uri
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.github.drjacky.imagepicker.ImagePicker
 import com.google.gson.Gson
 import com.inyongtisto.myhelper.base.BaseActivity
-import com.inyongtisto.myhelper.extension.showErrorDialog
-import com.inyongtisto.myhelper.extension.showSuccessDialog
-import com.inyongtisto.myhelper.extension.toMultipartBody
 import com.mavendra.golekkostv3.R
 import com.mavendra.golekkostv3.adapter.BarangTransaksiAdapter
+import com.mavendra.golekkostv3.adapter.RiwayatJualBarangAdapter
 import com.mavendra.golekkostv3.app.ApiConfig
 import com.mavendra.golekkostv3.app.Constants
 import com.mavendra.golekkostv3.helper.Helper
+import com.mavendra.golekkostv3.helper.SharedPref
 import com.mavendra.golekkostv3.model.*
 import kotlinx.android.synthetic.main.activity_detail_transfer.*
 import retrofit2.Call
@@ -31,14 +23,13 @@ import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail_jasaangkut.*
 import kotlinx.android.synthetic.main.activity_detail_jual_barang.*
-import kotlinx.android.synthetic.main.activity_detail_transfer.llBawah
 import kotlinx.android.synthetic.main.activity_detail_transfer.rvBarangDetailTransfer
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_riwayat_jual_barang.*
 import kotlinx.android.synthetic.main.toolbar_beranda.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
 import kotlinx.android.synthetic.main.toolbar_custom_keranjang_detail.*
 import kotlinx.android.synthetic.main.toolbar_custom_top_jasa_detail.*
-import java.io.File
 
 
 class DetailJualBarangActivity : BaseActivity() {
@@ -154,7 +145,6 @@ class DetailJualBarangActivity : BaseActivity() {
         Helper().setToolbar(this, toolbarBiasa, barang.name)
 
     }
-
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return super.onSupportNavigateUp()

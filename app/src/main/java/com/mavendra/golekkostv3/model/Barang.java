@@ -1,10 +1,12 @@
 package com.mavendra.golekkostv3.model;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
-import org.jetbrains.annotations.NotNull;
+import androidx.room.TypeConverter;
 
 import java.io.Serializable;
 import java.util.ArrayList;

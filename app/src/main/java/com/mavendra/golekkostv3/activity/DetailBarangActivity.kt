@@ -141,8 +141,6 @@ class DetailBarangActivity : AppCompatActivity() {
             .placeholder(R.drawable.beranda_ex_kostt)
             .error(R.drawable.beranda_ex_kostt)
             .into(ivgambarBarang)
-
-
     }
 
     fun checkKeterdediaan(){

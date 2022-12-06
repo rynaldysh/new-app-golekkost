@@ -43,7 +43,6 @@ class RiwayatJualBarangActivity : AppCompatActivity() {
     }
 
     fun getRiwayat(){
-
         val id = SharedPref(this).getUser()!!.id
         ApiConfig.instanceRetrofit.getCreateBarang(id).enqueue(object :
             Callback<ResponModel> {

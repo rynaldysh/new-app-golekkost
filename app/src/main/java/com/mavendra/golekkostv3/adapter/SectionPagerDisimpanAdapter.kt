@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.mavendra.golekkostv3.fragment.TabDisimpanFragment.DisimpanKostKontrakanFragment
 import com.mavendra.golekkostv3.fragment.TabDisimpanFragment.DisimpanJasaFragment
 
-class SectionPagerAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
+class SectionPagerDisimpanAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getPageTitle(position: Int): CharSequence? {
         return when(position){

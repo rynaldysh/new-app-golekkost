@@ -18,6 +18,7 @@ import com.mavendra.golekkostv3.app.ApiConfigAlamat
 import com.mavendra.golekkostv3.app.ApiKey
 import com.mavendra.golekkostv3.helper.Helper
 import com.mavendra.golekkostv3.helper.SharedPref
+import com.mavendra.golekkostv3.model.Barang
 import com.mavendra.golekkostv3.model.CheckOut
 import com.mavendra.golekkostv3.model.rajaongkir.Costs
 import com.mavendra.golekkostv3.model.rajaongkir.ResponOngkir

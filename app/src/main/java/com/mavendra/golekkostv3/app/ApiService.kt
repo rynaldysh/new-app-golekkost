@@ -65,8 +65,17 @@ interface ApiService {
         @Path("id") id: Int
     ): Call<ResponModel>
 
+    @GET("transaksipenjualan")
+    fun getRiwayatPenjualan(
+    ): Call<ResponModel>
+
     @POST("barang/terjual/{id}")
     fun terjualBarang(
+        @Path("id") id: Int
+    ): Call<ResponModel>
+
+    @POST("barang/proses/{id}")
+    fun prosesBarang(
         @Path("id") id: Int
     ): Call<ResponModel>
 

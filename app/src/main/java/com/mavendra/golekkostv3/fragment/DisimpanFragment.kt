@@ -5,23 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.mavendra.golekkostv3.R
-import com.mavendra.golekkostv3.adapter.KeranjangAdapter
-import com.mavendra.golekkostv3.adapter.SectionPagerAdapter
+import com.mavendra.golekkostv3.adapter.SectionPagerDisimpanAdapter
 import com.mavendra.golekkostv3.helper.SharedPref
-import com.mavendra.golekkostv3.model.Jasaangkut
 import com.mavendra.golekkostv3.room.MyDatabase
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_disimpan.*
-
-/**
- * A simple [Fragment] subclass.
- */
 
 class DisimpanFragment : Fragment() {
 
@@ -45,7 +34,7 @@ class DisimpanFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val sectionPagerAdapter = SectionPagerAdapter(
+        val sectionPagerAdapter = SectionPagerDisimpanAdapter(
             childFragmentManager
         )
         vpSimpan.adapter = sectionPagerAdapter
