@@ -79,6 +79,11 @@ interface ApiService {
         @Path("id") id: Int
     ): Call<ResponModel>
 
+    @POST("barang/dikirim/{id}")
+    fun dikirimBarang(
+        @Path("id") id: Int
+    ): Call<ResponModel>
+
     @GET("province")
     fun getProvinsi(
         @Header("key") key:String
@@ -120,6 +125,11 @@ interface ApiService {
     fun uploadBuktiTransfer(
         @Path("id") id: Int,
         @Part image: MultipartBody.Part
+    ): Call<ResponModel>
+
+    @POST("checkout/selesai/{id}")
+    fun selesaiCheckout(
+        @Path("id") id: Int
     ): Call<ResponModel>
 
     @POST("pesanjasa")

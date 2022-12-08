@@ -66,12 +66,27 @@ class DetailTransaksiPenjualanActivity : BaseActivity() {
     fun mainButton(){
         btProsesDetailTransaksiPenjualan.setOnClickListener {
             SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-                .setTitleText("Apakah anda yakin?")
-                .setContentText("Transaksi akan dibatalkan dan tidak bisa dikembalikan!")
+                .setTitleText("Apakah anda yakin")
+                .setContentText("Mengubah status barang menjadi proses?")
                 .setConfirmText("Ya, batalkan!")
                 .setConfirmClickListener {
                         it.dismissWithAnimation()
                         prosesBarang()
+                }
+                .setCancelText("Tutup")
+                .setCancelClickListener {
+                    it.dismissWithAnimation()
+                }.show()
+        }
+
+        btDikirimDetailTransaksiPenjualan.setOnClickListener {
+            SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("Apakah anda yakin")
+                .setContentText("Mengubah status barang menjadi dikirim?")
+                .setConfirmText("Ya, batalkan!")
+                .setConfirmClickListener {
+                    it.dismissWithAnimation()
+                    dikirimBarang()
                 }
                 .setCancelText("Tutup")
                 .setCancelClickListener {
@@ -99,7 +114,7 @@ class DetailTransaksiPenjualanActivity : BaseActivity() {
 
                     SweetAlertDialog(this@DetailTransaksiPenjualanActivity, SweetAlertDialog.SUCCESS_TYPE)
                         .setTitleText("Berhasil")
-                        .setContentText("Transaksi berhasil dibatalkan")
+                        .setContentText("Status berhasil diubah menjadi proses")
                         .setConfirmClickListener {
                             it.dismissWithAnimation()
                             onBackPressed()
@@ -109,6 +124,40 @@ class DetailTransaksiPenjualanActivity : BaseActivity() {
                     Toast.makeText(this@DetailTransferActivity, "Transfer berhasil dibatalkan", Toast.LENGTH_SHORT).show()
                     onBackPressed()
                     *//*displayRiwayat(res.transaksis)*/
+                } else {
+                    error(res.message)
+                }
+            }
+        })
+    }
+
+    fun dikirimBarang(){
+        val loading = SweetAlertDialog(this@DetailTransaksiPenjualanActivity, SweetAlertDialog.PROGRESS_TYPE)
+        loading.setTitleText("Memuat...").show()
+        ApiConfig.instanceRetrofit.dikirimBarang(transaksi.id).enqueue(object :
+            Callback<ResponModel> {
+            override fun onFailure(call: Call<ResponModel>, t: Throwable) {
+                loading.dismiss()
+                error(t.message.toString())
+            }
+
+            override fun onResponse(call: Call<ResponModel>, response: Response<ResponModel>) {
+                loading.dismiss()
+                val res = response.body()!!
+                if (res.success == 1){
+
+                    SweetAlertDialog(this@DetailTransaksiPenjualanActivity, SweetAlertDialog.SUCCESS_TYPE)
+                        .setTitleText("Berhasil")
+                        .setContentText("Status berhasil diubah menjadi dikirim")
+                        .setConfirmClickListener {
+                            it.dismissWithAnimation()
+                            onBackPressed()
+                        }.show()
+
+                    /*
+                        Toast.makeText(this@DetailTransferActivity, "Transfer berhasil dibatalkan", Toast.LENGTH_SHORT).show()
+                        onBackPressed()
+                        *//*displayRiwayat(res.transaksis)*/
                 } else {
                     error(res.message)
                 }
@@ -137,10 +186,22 @@ class DetailTransaksiPenjualanActivity : BaseActivity() {
         tvBiayaKirimDetailTransaksiPenjualan.text = Helper().gantiRupiah(transaksi.ongkir)
         tvTotalDetailTransaksiPenjualan.text = Helper().gantiRupiah(transaksi.total_transfer)
 
+        var color = getColor(R.color.menunggu)
+        if (transaksi.status == "SELESAI") color = getColor(R.color.selesai)
+        else if (transaksi.status == "BATAL") color = getColor(R.color.batal)
+
+        tvStatusDetailTransaksiPenjualan.setTextColor(color)
+
         if(transaksi.status != "DIBAYAR"){
             btProsesDetailTransaksiPenjualan.visibility = View.GONE
         } else {
             btProsesDetailTransaksiPenjualan.visibility = View.VISIBLE
+        }
+
+        if (transaksi.status == "PROSES"){
+            btDikirimDetailTransaksiPenjualan.visibility = View.VISIBLE
+        } else {
+            btDikirimDetailTransaksiPenjualan.visibility = View.GONE
         }
     }
 

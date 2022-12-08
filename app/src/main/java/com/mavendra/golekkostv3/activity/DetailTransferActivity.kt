@@ -30,6 +30,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_detail_transaksi_penjualan.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.toolbar_beranda.*
 import kotlinx.android.synthetic.main.toolbar_biasa.*
@@ -49,6 +50,7 @@ class DetailTransferActivity : BaseActivity() {
         val json = intent.getStringExtra("transaksi")
         transaksi = Gson().fromJson(json, Transaksi::class.java)
 
+        /*checkProses()*/
         setData(transaksi)
         displayDetailTransfer(transaksi.details)
         mainButton()
@@ -72,6 +74,21 @@ class DetailTransferActivity : BaseActivity() {
 
         btBayarDetailTransfer.setOnClickListener {
             imagePick()
+        }
+
+        btDiterimaDetailTransfer.setOnClickListener {
+            SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("Apakah anda yakin")
+                .setContentText("Barang yang anda beli sudah diterima?")
+                .setConfirmText("Ya, batalkan!")
+                .setConfirmClickListener {
+                    it.dismissWithAnimation()
+                    diterimaCheckout()
+                }
+                .setCancelText("Tutup")
+                .setCancelClickListener {
+                    it.dismissWithAnimation()
+                }.show()
         }
     }
 
@@ -190,6 +207,40 @@ class DetailTransferActivity : BaseActivity() {
         })
     }
 
+    fun diterimaCheckout(){
+        val loading = SweetAlertDialog(this@DetailTransferActivity, SweetAlertDialog.PROGRESS_TYPE)
+        loading.setTitleText("Memuat...").show()
+        ApiConfig.instanceRetrofit.selesaiCheckout(transaksi.id).enqueue(object :
+            Callback<ResponModel> {
+            override fun onFailure(call: Call<ResponModel>, t: Throwable) {
+                loading.dismiss()
+                error(t.message.toString())
+            }
+
+            override fun onResponse(call: Call<ResponModel>, response: Response<ResponModel>) {
+                loading.dismiss()
+                val res = response.body()!!
+                if (res.success == 1){
+
+                    SweetAlertDialog(this@DetailTransferActivity, SweetAlertDialog.SUCCESS_TYPE)
+                        .setTitleText("Berhasil")
+                        .setContentText("Proses Pembelian telah anda selesaikan")
+                        .setConfirmClickListener {
+                            it.dismissWithAnimation()
+                            onBackPressed()
+                        }.show()
+
+                    /*
+                        Toast.makeText(this@DetailTransferActivity, "Transfer berhasil dibatalkan", Toast.LENGTH_SHORT).show()
+                        onBackPressed()
+                        *//*displayRiwayat(res.transaksis)*/
+                } else {
+                    error(res.message)
+                }
+            }
+        })
+    }
+
     fun error(pesan: String){
         SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
             .setTitleText("Maaf")
@@ -212,13 +263,27 @@ class DetailTransferActivity : BaseActivity() {
         tvBiayaKirimDetailTransfer.text = Helper().gantiRupiah(transaksi.ongkir)
         tvTotalDetailTransfer.text = Helper().gantiRupiah(transaksi.total_transfer)
 
-        if(transaksi.status != "MENUNGGU") llBawah.visibility = View.GONE
+        if(transaksi.status != "MENUNGGU") {
+            llBawah.visibility = View.GONE
+        } else {
+            llBawah.visibility = View.VISIBLE
+        }
+
+        if (transaksi.status != "DIKIRIM"){
+            llSelesai.visibility = View.GONE
+        } else {
+            llSelesai.visibility = View.VISIBLE
+        }
 
         var color = getColor(R.color.menunggu)
         if (transaksi.status == "SELESAI") color = getColor(R.color.selesai)
         else if (transaksi.status == "BATAL") color = getColor(R.color.batal)
 
         tvStatusDetailTransfer.setTextColor(color)
+    }
+
+    fun checkProses(){
+
     }
 
     fun displayDetailTransfer(transaksis: ArrayList<DetailTransaksi>) {

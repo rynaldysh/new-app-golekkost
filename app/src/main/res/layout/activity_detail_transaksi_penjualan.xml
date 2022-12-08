@@ -234,6 +234,19 @@
                         android:textSize="@dimen/_12ssp"
                         android:visibility="gone"/>
 
+                    <Button
+                        android:id="@+id/btDikirimDetailTransaksiPenjualan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/tombol_bayar_transaksi"
+                        android:text="Dikirim"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="gone"/>
+
                 </LinearLayout>
 
             </LinearLayout>
