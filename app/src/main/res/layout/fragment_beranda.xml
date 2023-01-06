@@ -132,15 +132,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Kost atau Kontrakan"
-                        android:textSize="@dimen/_14ssp"
-                        android:textColor="@color/primary_color2"
-                        android:textStyle="bold"
-                        android:layout_marginHorizontal="@dimen/_10sdp"/>
-
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rvKostKontrakan"
                         android:layout_width="match_parent"

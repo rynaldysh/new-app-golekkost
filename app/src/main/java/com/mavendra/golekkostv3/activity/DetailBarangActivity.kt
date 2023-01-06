@@ -21,7 +21,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_detail_barang.*
-import kotlinx.android.synthetic.main.activity_detail_jual_barang.*
 import kotlinx.android.synthetic.main.toolbar_custom_bottom_barang_detail.*
 import kotlinx.android.synthetic.main.toolbar_custom_keranjang_detail.*
 
@@ -38,8 +37,6 @@ class DetailBarangActivity : AppCompatActivity() {
 
         val json = intent.getStringExtra("kategoribarang")
         barang = Gson().fromJson(json, Barang::class.java)
-
-        Helper().setToolbar(this, toolbarKeranjangAtas, barang.name)
 
         getInfo(barang)
         mainButton()
@@ -141,6 +138,8 @@ class DetailBarangActivity : AppCompatActivity() {
             .placeholder(R.drawable.beranda_ex_kostt)
             .error(R.drawable.beranda_ex_kostt)
             .into(ivgambarBarang)
+
+        Helper().setToolbar(this, toolbarKeranjangAtas, barang.name)
     }
 
     fun checkKeterdediaan(){

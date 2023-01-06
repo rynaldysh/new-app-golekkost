@@ -64,7 +64,7 @@ class KategoriKostKontrakanActivity : AppCompatActivity() {
             override fun onClicked(data: Kostkontrakan) {
                 val json = Gson().toJson(data, Kostkontrakan::class.java)
                 val intent = Intent(this@KategoriKostKontrakanActivity, DetailKostKontrakanActivity::class.java)
-                intent.putExtra("kategorijasaangkut", json)
+                intent.putExtra("kategorikostkontrakan", json)
                 startActivity(intent)
 
             }

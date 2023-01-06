@@ -20,6 +20,7 @@
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/drawable/nav_basket.xml" value="0.2203125" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/drawable/nav_beranda.xml" value="0.2203125" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/drawable/nav_chat.xml" value="0.2203125" />
+        <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/drawable/nav_ic_archieve.xml" value="0.2630208333333333" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/drawable/nav_ic_beranda.xml" value="0.3828125" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/drawable/nav_ic_chat.xml" value="0.37864583333333335" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/drawable/nav_ic_disimpan.xml" value="0.37864583333333335" />
@@ -62,7 +63,7 @@
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_detail_barang.xml" value="0.25" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_detail_jasaangkut.xml" value="0.36057287278854255" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_detail_jual_barang.xml" value="0.25" />
-        <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_detail_kostkontrakan.xml" value="0.33" />
+        <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_detail_kostkontrakan.xml" value="0.1" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_detail_pesan_jasa.xml" value="0.25" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_detail_pesan_kostkontrakan.xml" value="0.2" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/activity_detail_transaksi.xml" value="0.33" />
@@ -135,7 +136,7 @@
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/fragment_keranjang.xml" value="0.33" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/fragment_penjualan_anda.xml" value="0.3625" />
-        <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/fragment_profil.xml" value="0.33" />
+        <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/fragment_profil.xml" value="0.2" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/fragment_transaksi.xml" value="0.36666666666666664" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/fragment_transaksii.xml" value="0.1" />
         <entry key="..\:/tugasUii/Semester7/GolekKostV3/app/src/main/res/layout/item_aktivitas_barang.xml" value="0.3625" />

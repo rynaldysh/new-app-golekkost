@@ -25,6 +25,7 @@ class KategoriKostkontrakanAdapter(var data: ArrayList<Kostkontrakan>, var liste
         val tvHarga = view.findViewById<TextView>(R.id.tvHargaKategoriKostkontrakan)
         val tvLokasi = view.findViewById<TextView>(R.id.tvLokasiKategoriKostkontrakan)
         val tvDeskripsi = view.findViewById<TextView>(R.id.tvDeskripsiKategoriKostkontrakan)
+        val tvMayoritas = view.findViewById<TextView>(R.id.tvMayoritasKategoriKostkontrakan)
         val ivBarang = view.findViewById<ImageView>(R.id.ivKategoriKostkontrakan)
         val layout = view.findViewById<CardView>(R.id.layoutKategoriKostkontrakan)
 
@@ -47,6 +48,7 @@ class KategoriKostkontrakanAdapter(var data: ArrayList<Kostkontrakan>, var liste
         holder.tvHarga.text = NumberFormat.getCurrencyInstance(Locale("in", "ID")).format(Integer.valueOf(data[position].harga))
         holder.tvLokasi.text = data[position].lokasi
         holder.tvDeskripsi.text = data[position].deskripsi
+        holder.tvMayoritas.text = data[position].mayoritas
 
         val image =  Constants.KOSTKONTRAKAN_URL + data[position].image
         Picasso.get()
@@ -58,6 +60,15 @@ class KategoriKostkontrakanAdapter(var data: ArrayList<Kostkontrakan>, var liste
         holder.layout.setOnClickListener {
             listener.onClicked(data[position])
         }
+
+        var color = context.getColor(R.color.mahasiswa)
+        when (data[position].mayoritas) {
+            "Mahasiswa" -> color = context.getColor(R.color.mahasiswa)
+            "Pegawai" -> color = context.getColor(R.color.pegawai)
+            "Campuran" -> color = context.getColor(R.color.campuran)
+        }
+
+        holder.tvMayoritas.setBackgroundColor(color)
     }
 
     interface  Listeners{

@@ -1,6 +1,5 @@
 package com.mavendra.golekkostv3.activity
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,20 +19,22 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_detail_kostkontrakan.*
-import kotlinx.android.synthetic.main.activity_detail_kostkontrakan.tvDeskripsi
-import kotlinx.android.synthetic.main.activity_detail_kostkontrakan.tvLokasi
+import kotlinx.android.synthetic.main.toolbar_custom_bottom_jasa_detail.*
 import kotlinx.android.synthetic.main.toolbar_custom_bottom_kost_kontrakan_detail.*
 import kotlinx.android.synthetic.main.toolbar_custom_top_kost_kontrakan_detail.*
 
 class DetailKostKontrakanActivity : AppCompatActivity() {
 
-    lateinit var kostkontrakan: Kostkontrakan
+    lateinit var kostkontrakan : Kostkontrakan
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_kostkontrakan)
 
-        getInfo()
+        val json = intent.getStringExtra("kategorikostkontrakan")
+        kostkontrakan = Gson().fromJson(json, Kostkontrakan::class.java)
+
+        getInfo(kostkontrakan)
         mainButton()
         checkSimpanKostKontrakan()
     }
@@ -92,28 +93,26 @@ class DetailKostKontrakanActivity : AppCompatActivity() {
         }
     }
 
-    private fun getInfo() {
-        val data = intent.getStringExtra("kostkontrakan")
-        kostkontrakan = Gson().fromJson<Kostkontrakan>(data, Kostkontrakan::class.java)
+    private fun getInfo(kostkontrakan: Kostkontrakan) {
 
         //set Value
-        tvNamaKost.text = kostkontrakan.name
-        tvNamaPengelola.text = kostkontrakan.pengelola
-        tvHargaKost.text = Helper().gantiRupiah(kostkontrakan.harga)
-        tvRasioPembayaranDetailKost.text = kostkontrakan.rasiobayar
-        tvLokasi.text = kostkontrakan.lokasi
-        tvSisaKamar.text = kostkontrakan.sisakamar
-        tvTotalKamar.text = kostkontrakan.totalkamar
-        tvMayoritas.text = kostkontrakan.mayoritas
-        tvDeskripsi.text = kostkontrakan.deskripsi
-        tvListrik.text = kostkontrakan.listrik
-        tvAir.text = kostkontrakan.air
-        tvWifi.text = kostkontrakan.wifi
-        tvBed.text = kostkontrakan.bed
-        tvAc.text = kostkontrakan.ac
-        tvKamarMandi.text = kostkontrakan.kamarmandi
-        tvKloset.text = kostkontrakan.kloset
-        tvSatpam.text = kostkontrakan.satpam
+        tvNamaKostDetail.text = kostkontrakan.name
+        tvNamaPengelolaDetail.text = kostkontrakan.pengelola
+        tvHargaKostDetail.text = Helper().gantiRupiah(kostkontrakan.harga)
+        tvRasioPembayaranKostDetail.text = kostkontrakan.rasiobayar
+        tvLokasiDetail.text = kostkontrakan.lokasi
+        tvSisaKamarDetail.text = kostkontrakan.sisakamar
+        tvTotalKamarDetail.text = kostkontrakan.totalkamar
+        tvMayoritasDetail.text = kostkontrakan.mayoritas
+        tvDeskripsiDetail.text = kostkontrakan.deskripsi
+        tvListrikDetail.text = kostkontrakan.listrik
+        tvAirDetail.text = kostkontrakan.air
+        tvWifiDetail.text = kostkontrakan.wifi
+        tvBedDetail.text = kostkontrakan.bed
+        tvAcDetail.text = kostkontrakan.ac
+        tvKamarMandiDetail.text = kostkontrakan.kamarmandi
+        tvKlosetDetail.text = kostkontrakan.kloset
+        tvSatpamDetail.text = kostkontrakan.satpam
 
         var color = getColor(R.color.mahasiswa)
         when (kostkontrakan.mayoritas) {
@@ -122,14 +121,14 @@ class DetailKostKontrakanActivity : AppCompatActivity() {
             "Campuran" -> color = getColor(R.color.campuran)
         }
 
-        tvMayoritas.setBackgroundColor(color)
+        tvMayoritasDetail.setBackgroundColor(color)
 
         val image =  KOSTKONTRAKAN_URL + kostkontrakan.image
         Picasso.get()
             .load(image)
             .placeholder(R.drawable.beranda_ex_kostt)
             .error(R.drawable.beranda_ex_kostt)
-            .into(ivGambarKost)
+            .into(ivGambarKostDetail)
 
         Helper().setToolbar(this, toolbarDisimpanKostKontrakanAtas, kostkontrakan.name)
     }

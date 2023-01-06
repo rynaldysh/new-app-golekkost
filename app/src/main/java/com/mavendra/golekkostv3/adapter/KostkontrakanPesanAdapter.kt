@@ -49,7 +49,7 @@ class KostkontrakanPesanAdapter(var data:ArrayList<DetailPesanKostkontrakan>):Re
         holder.tvHarga.text = Helper().gantiRupiah(b.harga)
         holder.tvLokasi.text = b.lokasi
 
-        val image =  Constants.JASAANGKUT_URL + b.image
+        val image =  Constants.KOSTKONTRAKAN_URL + b.image
         Picasso.get()
             .load(image)
             .placeholder(R.drawable.beranda_ex_kostt)

@@ -73,7 +73,7 @@ class KostKontrakanAdapter(var activity: Activity, var data:ArrayList<Kostkontra
         holder.layout.setOnClickListener {
             val kostKontrakan = Intent(activity, DetailKostKontrakanActivity::class.java)
             val str = Gson().toJson(data[position], Kostkontrakan::class.java)
-            kostKontrakan.putExtra("kostkontrakan", str)
+            kostKontrakan.putExtra("kategorikostkontrakan", str)
             activity.startActivity(kostKontrakan)
         }
     }

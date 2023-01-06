@@ -86,8 +86,6 @@ class BerandaFragment : Fragment() {
             startActivity(intent)
             return
         }
-
-
     }
 
     private var listKostKontrakan :ArrayList<Kostkontrakan> = ArrayList()

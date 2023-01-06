@@ -294,7 +294,8 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="2dp"
                     android:backgroundTint="@color/white"
-                    app:cardElevation="3dp">
+                    app:cardElevation="3dp"
+                    android:visibility="visible">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -341,7 +342,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginHorizontal="10dp"
-                            android:layout_marginTop="20dp">
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -374,7 +376,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginHorizontal="10dp"
-                            android:layout_marginTop="20dp">
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -414,7 +417,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/_10sdp"
-            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_alignParentBottom="true"/>
 
     </RelativeLayout>
