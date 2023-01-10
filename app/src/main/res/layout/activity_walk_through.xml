@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_primary"
+    tools:context=".activity.WalkThroughActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpWalkThrough"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:id="@+id/rlBot"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tvLewati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/lewati"
+            android:textColor="@color/on_boarding_color"
+            android:layout_alignParentStart="true"/>
+
+        <LinearLayout
+            android:id="@+id/llDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tvLewati"
+            android:layout_toStartOf="@id/tvLanjutkan"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+
+        <TextView
+            android:id="@+id/tvLanjutkan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/on_boarding_color"
+            android:text="@string/lanjutkan"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

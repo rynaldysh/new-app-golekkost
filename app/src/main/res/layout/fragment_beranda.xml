@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:layout_marginHorizontal="@dimen/_30sdp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcJasaangkut"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:src="@drawable/beranda_jasa_angkut"
+                                android:layout_gravity="center"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:text="Jasa Angkut atau pindahan"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:layout_marginVertical="@dimen/_2sdp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerInParent="true">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcKostKontrakan"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:src="@drawable/beranda_info_kostkontrakan"
+                                android:layout_gravity="center"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:text="Kost atau Kontrakan"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:layout_marginVertical="@dimen/_2sdp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentEnd="true">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcBarang"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:src="@drawable/beranda_jualbeli_barang"
+                                android:layout_gravity="center"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:text="Perabotan Kost atau Kontrakan"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:layout_marginVertical="@dimen/_2sdp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvKostKontrakan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_kostkontrakan"
+                        app:spanCount="2"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            layout="@layout/view_jual_barang"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_15sdp"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

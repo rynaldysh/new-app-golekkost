@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mavendra.golekkostv3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GolekKostV3"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.WalkThroughActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MasukActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.DetailKostKontrakanActivity" />
+        <activity android:name=".activity.DetailJasaAngkutActivity" />
+        <activity android:name=".activity.DetailBarangActivity" />
+        <activity android:name=".activity.ListAlamatActivity" />
+        <activity android:name=".activity.TambahAlamatActivity" />
+        <activity android:name=".activity.PembayaranActivity" />
+        <activity android:name=".activity.PengirimanActivity" />
+        <activity android:name=".activity.SuccesActivity" />
+        <activity android:name=".activity.RiwayatBelanjaActivity" />
+        <activity android:name=".activity.DetailTransferActivity" />
+        <activity android:name=".activity.KirimPemesananJasaActivity" />
+        <activity android:name=".activity.TambahAlamatPesanKostKontrakanActivity" />
+        <activity android:name=".activity.SuccesJasaActivity" />
+        <activity android:name=".activity.ListAlamatPesanJasaActivity" />
+        <activity android:name=".activity.KirimPemesananKostKontrakanActivity" />
+        <activity android:name=".activity.ListAlamatPesanKostKontrakanActivity" />
+        <activity android:name=".activity.TambahAlamatPesanJasaActivity" />
+        <activity android:name=".activity.RiwayatPesanJasaActivity" />
+        <activity android:name=".activity.SuccesKostkontrakanActivity" />
+        <activity android:name=".activity.RiwayatPesanKostkontrakanActivity" />
+        <activity android:name=".activity.DetailPesanJasaActivity" />
+        <activity android:name=".activity.DetailPesanKostkontrakanActivity" />
+        <activity android:name=".activity.JualBarangActivity" />
+        <activity android:name=".activity.UploadFotoBarangActivity" />
+        <activity android:name=".activity.RiwayatJualBarangActivity" />
+        <activity android:name=".activity.DetailJualBarangActivity" />
+        <activity android:name=".activity.KategoriBarangActivity" />
+        <activity android:name=".activity.KategoriJasaangkutActivity" />
+        <activity android:name=".activity.KategoriKostKontrakanActivity" />
+        <activity android:name=".activity.RiwayatTransaksiPenjualanActivity" />
+        <activity android:name=".activity.DetailTransaksiPenjualanActivity" />
+    </application>
+
+</manifest>

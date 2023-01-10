@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idTambahJualBarang"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_50sdp"
+    android:layout_marginVertical="@dimen/_10sdp"
+    android:background="@drawable/tombol_bulat"
+    android:text="Tambah Barang"
+    android:textColor="@color/white"
+    android:textStyle="bold">
+
+
+
+</Button>

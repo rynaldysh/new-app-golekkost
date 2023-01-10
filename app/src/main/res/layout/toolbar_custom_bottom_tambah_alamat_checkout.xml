@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btSimpan"
+    android:layout_width="@dimen/_150sdp"
+    android:layout_height="@dimen/_40sdp"
+    android:layout_marginHorizontal="@dimen/_40sdp"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:text="Simpan"
+    android:textSize="@dimen/_16ssp"
+    android:textColor="@color/white"
+    android:textAllCaps="false"
+    android:background="@drawable/tombol_bulat"
+    android:layout_gravity="center_horizontal"/>

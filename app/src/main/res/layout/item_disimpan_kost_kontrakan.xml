@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/layoutDisimpanKostKontrakan"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_90sdp"
+    android:backgroundTint="@color/primary_color"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivItemDisimpanKostKontrakan"
+                android:layout_width="@dimen/_136sdp"
+                android:layout_height="@dimen/_95sdp"
+                android:src="@drawable/beranda_ex_kostt"
+                android:scaleType="centerCrop"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/checkBoxItemDisimpanKostKontrakan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/ivDeleteItemDisimpanKostKontrakan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_3sdp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_marginVertical="@dimen/_3sdp">
+
+            <TextView
+                android:id="@+id/tvNamaItemDisimpanKostKontrakan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="Nama Item Disimpan Jasa"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:tint="@color/black"
+                    android:src="@drawable/beranda_location"
+                    android:layout_marginTop="@dimen/_4sdp"/>
+
+                <TextView
+                    android:id="@+id/tvLokasiItemDisimpanKostKontrakan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="masih ujicoba aja dulu, buat nama lokasi masih ujicoba aja dulu, buat nama lokasi"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:textAlignment="inherit"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:maxLines="2"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/tvHargaItemDisimpanKostKontrakan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Rp100.000.000,00"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_custom_top_kost_kontrakan_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_50sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_224sdp">
+
+                    <ImageView
+                        android:id="@+id/ivGambarKostDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/beranda_ex_kostt" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_9sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvNamaKostDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Nama Kost apa ya masih dicoba kok"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_25ssp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/register_login_person"/>
+
+                        <TextView
+                            android:id="@+id/tvNamaPengelolaDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Pengelola"
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_marginStart="@dimen/_3sdp"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true">
+
+                                <TextView
+                                    android:id="@+id/tvMayoritasDetail"
+                                    android:layout_width="@dimen/_75sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:background="@color/black"
+                                    android:text="Mayoritas Mahasiswa"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13ssp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@drawable/beranda_location"
+                                android:layout_gravity="center_vertical"/>
+
+                            <TextView
+                                android:id="@+id/tvLokasiDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nama Lokasi"
+                                android:textSize="@dimen/_15ssp"
+                                android:layout_marginBottom="@dimen/_1sdp"
+                                android:layout_marginStart="@dimen/_3sdp"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@drawable/nav_ic_beranda" />
+
+                            <TextView
+                                android:id="@+id/tvSisaKamarDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_1sdp"
+                                android:text="Sisa Kamar "
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_1sdp"
+                                android:text="dari "
+                                android:textSize="@dimen/_15ssp" />
+
+                            <TextView
+                                android:id="@+id/tvTotalKamarDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_1sdp"
+                                android:text="Total kamar"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_2sdp"
+                        android:background="#CACACA"
+                        android:layout_marginTop="@dimen/_6sdp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Deskripsi"
+                                android:textSize="@dimen/_20ssp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvDeskripsiDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:justificationMode="inter_word"
+                                android:textSize="@dimen/_15ssp"
+                                android:text="masih ujicoba aja dulu, jangan main
+                                              main ya ya ges ya jangan dihujat jangan
+                                              dikomen terlebih dahulu apakah harus
+                                              panjang agar teruji?"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fasilitas"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_20ssp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_15sdp"
+                                            android:layout_height="@dimen/_15sdp"
+                                            android:src="@drawable/detail_electric"
+                                            android:layout_gravity="center_vertical"/>
+
+                                        <TextView
+                                            android:id="@+id/tvListrikDetail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Listrik"
+                                            android:textSize="@dimen/_15ssp"
+                                            android:layout_marginStart="@dimen/_8sdp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="@dimen/_8sdp">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_15sdp"
+                                            android:layout_height="@dimen/_15sdp"
+                                            android:src="@drawable/detail_water"
+                                            android:layout_gravity="center_vertical"/>
+
+                                        <TextView
+                                            android:id="@+id/tvAirDetail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Air"
+                                            android:textSize="@dimen/_15ssp"
+                                            android:layout_marginStart="@dimen/_8sdp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="@dimen/_8sdp">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_15sdp"
+                                            android:layout_height="@dimen/_15sdp"
+                                            android:src="@drawable/detail_wifi"
+                                            android:layout_gravity="center_vertical"/>
+
+                                        <TextView
+                                            android:id="@+id/tvWifiDetail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="WiFi"
+                                            android:textSize="@dimen/_15ssp"
+                                            android:layout_marginStart="@dimen/_8sdp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="@dimen/_8sdp">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_15sdp"
+                                            android:layout_height="@dimen/_15sdp"
+                                            android:src="@drawable/detail_bed"
+                                            android:layout_gravity="center_vertical"/>
+
+                                        <TextView
+                                            android:id="@+id/tvBedDetail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Bed"
+                                            android:textSize="@dimen/_15ssp"
+                                            android:layout_marginStart="@dimen/_8sdp"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_150sdp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_15sdp"
+                                            android:layout_height="@dimen/_15sdp"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/detail_ac" />
+
+                                        <TextView
+                                            android:id="@+id/tvAcDetail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_8sdp"
+                                            android:text="AC"
+                                            android:textSize="@dimen/_15ssp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_15sdp"
+                                            android:layout_height="@dimen/_15sdp"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/detail_bathroom" />
+
+                                        <TextView
+                                            android:id="@+id/tvKamarMandiDetail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_8sdp"
+                                            android:text="Kamar Mandi"
+                                            android:textSize="@dimen/_15ssp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_15sdp"
+                                            android:layout_height="@dimen/_15sdp"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/detail_toilet" />
+
+                                        <TextView
+                                            android:id="@+id/tvKlosetDetail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_8sdp"
+                                            android:text="Kloset duduk"
+                                            android:textSize="@dimen/_15ssp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_15sdp"
+                                            android:layout_height="@dimen/_15sdp"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/detail_security" />
+
+                                        <TextView
+                                            android:id="@+id/tvSatpamDetail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_8sdp"
+                                            android:text="Satpam Kost"
+                                            android:textSize="@dimen/_15ssp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_2sdp"
+                        android:background="#CACACA"
+                        android:layout_marginTop="@dimen/_6sdp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Biaya"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_20ssp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvHargaKostDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:text="HARGA KOST ATAU KONTRAKAN"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15ssp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="/"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15ssp" />
+
+                                <TextView
+                                    android:id="@+id/tvRasioPembayaranKostDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bulan"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15ssp"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <WebView
+                                        android:id="@+id/webKostKontrakan"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include
+            layout="@layout/toolbar_custom_bottom_kost_kontrakan_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

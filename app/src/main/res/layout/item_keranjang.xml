@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/layoutKeranjang"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_90sdp"
+    android:backgroundTint="@color/primary_color"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_90sdp">
+
+            <ImageView
+                android:id="@+id/ivItem"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/beranda_ex_kostt"
+                android:scaleType="centerCrop"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/button_delete"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNamaItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Item Keranjang"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:lines="1"
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:tint="@color/black"
+                    android:src="@drawable/beranda_location"
+                    android:layout_marginTop="@dimen/_4sdp"/>
+
+                <TextView
+                    android:id="@+id/tvLokasiItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="masih ujicoba aja dulu, buat nama lokasi masih ujicoba aja dulu, buat nama lokasi"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:textAlignment="inherit"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:maxLines="2"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/tvHargaItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:maxLines="2"
+                        android:text="Rp100.000.000,00"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/bg_btn_penambah"
+                    android:layout_alignParentEnd="true">
+
+                    <ImageView
+                        android:id="@+id/ivKurang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:src="@drawable/button_kurang" />
+
+                    <TextView
+                        android:id="@+id/tvJumlahBarang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="1"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivTambah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:src="@drawable/button_add" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

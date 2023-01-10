@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/bg_color_primary">
+
+    <include
+        layout="@layout/toolbar_biasa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_14sdp"
+                    android:paddingEnd="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat Pengiriman"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tvKosong"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pilih Alamat Pengiriman"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_1sdp"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_6sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvNamaAlamat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nama"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/_14ssp"/>
+
+                                <TextView
+                                    android:id="@+id/tvPhoneAlamat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="phone"
+                                    android:textSize="@dimen/_14ssp"/>
+
+                                <TextView
+                                    android:id="@+id/tvAlamatAlamat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Alamat"
+                                    android:textSize="@dimen/_14ssp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/btTambahAlamat"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Tambah Alamat"
+                        android:textStyle="bold"
+                        android:background="@drawable/tombol_pembayaran_white"
+                        android:textAllCaps="false"/>
+
+                    <LinearLayout
+                        android:id="@+id/llMetodePengiriman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pilih Metode Pengiriman"
+                            android:textSize="@dimen/_14ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_10sdp"/>
+
+                        <Spinner
+                            android:id="@+id/spnKurir"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_31sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:textSize="@dimen/_14ssp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Metode Pengiriman"
+                            android:textSize="@dimen/_14ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:id="@+id/tvKosongPilihMetode"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pilih Metode Pengiriman"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvPengiriman"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:visibility="visible">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvMetode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rekap Belanja "
+                            android:textSize="@dimen/_14ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_10sdp"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Belanja"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14ssp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_5sdp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="end"
+                                    android:layout_marginEnd="@dimen/_5sdp">
+
+                                    <TextView
+                                        android:id="@+id/tvTotalBelanja"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="@dimen/_14ssp"
+                                        android:textColor="@color/black"
+                                        android:layout_gravity="center_vertical"/>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_3sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Biaya Pengiriman"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14ssp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_5sdp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="end"
+                                    android:layout_marginEnd="@dimen/_5sdp">
+
+                                    <TextView
+                                        android:id="@+id/tvBiayaPengiriman"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="@dimen/_14ssp"
+                                        android:textColor="@color/black"
+                                        android:layout_gravity="center_vertical"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_3sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14ssp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_5sdp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="end"
+                                    android:layout_marginEnd="@dimen/_5sdp">
+
+                                    <TextView
+                                        android:id="@+id/tvTotalKeseleruhan"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textStyle="bold"
+                                        android:textSize="@dimen/_14ssp"
+                                        android:textColor="@color/black"
+                                        android:layout_gravity="center_vertical"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <Button
+                            android:id="@+id/btBayar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:text="Bayar"
+                            android:textColor="@color/white"
+                            android:textAllCaps="true"
+                            android:background="@drawable/tombol_bulat"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
