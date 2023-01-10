@@ -33,20 +33,37 @@ interface ApiService {
     fun getKostKontrakan(
     ): Call<ResponModel>
 
-    @GET("kostkontrakan/sleman/{lokasi}")
-    fun getKostKontrakanFiltSleman(
+    @GET("kostkontrakan/slemanTahun/{lokasi}")
+    fun getKostKontrakanFiltSlemanTahun(
     ): Call<ResponModel>
 
-    @GET("kostkontrakan/bantul/{lokasi}")
-    fun getKostKontrakanFiltBantul(
+    @GET("kostkontrakan/slemanBulan/{lokasi}")
+    fun getKostKontrakanFiltSlemanBulan(
     ): Call<ResponModel>
 
-    @GET("kostkontrakan/gunungKidul/{lokasi}")
-    fun getKostKontrakanFiltGunungKidul(
+
+    @GET("kostkontrakan/bantulTahun/{lokasi}")
+    fun getKostKontrakanFiltBantulTahun(
     ): Call<ResponModel>
 
-    @GET("kostkontrakan/kotaYogyakarta/{lokasi}")
-    fun getKostKontrakanFiltKotaYoogyakarta(
+    @GET("kostkontrakan/bantulBulan/{lokasi}")
+    fun getKostKontrakanFiltBantulBulan(
+    ): Call<ResponModel>
+
+    @GET("kostkontrakan/gunungKidulTahun/{lokasi}")
+    fun getKostKontrakanFiltGunungKidulTahun(
+    ): Call<ResponModel>
+
+    @GET("kostkontrakan/gunungKidulBulan/{lokasi}")
+    fun getKostKontrakanFiltGunungKidulBulan(
+    ): Call<ResponModel>
+
+    @GET("kostkontrakan/kotaYogyakartaTahun/{lokasi}")
+    fun getKostKontrakanFiltKotaYoogyakartaTahun(
+    ): Call<ResponModel>
+
+    @GET("kostkontrakan/kotaYogyakartaBulan/{lokasi}")
+    fun getKostKontrakanFiltKotaYoogyakartaBulan(
     ): Call<ResponModel>
 
     @GET("jasaangkut")

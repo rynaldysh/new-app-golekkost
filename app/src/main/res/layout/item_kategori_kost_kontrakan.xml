@@ -122,7 +122,18 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:text="Rp1.000.000"
+                    android:text="Rp100.000.000"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_37sdp"/>
+
+                <TextView
+                    android:id="@+id/tvRasioKategoriKostkontrakan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="/Bulan"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="bold" />
             </RelativeLayout>

@@ -75,9 +75,9 @@ class KategoriKostKontrakanActivity : AppCompatActivity() {
         rvKategoriKostkontrakan.layoutManager = layoutManagerKostkontrakan
     }
 
-    fun filterKostKontrakanSleman(){
-        btSleman.setOnClickListener {
-            ApiConfig.instanceRetrofit.getKostKontrakanFiltSleman().enqueue(object :
+    fun filterKostKontrakan(){
+        btSlemanBulan.setOnClickListener {
+            ApiConfig.instanceRetrofit.getKostKontrakanFiltSlemanBulan().enqueue(object :
                 Callback<ResponModel> {
                 override fun onFailure(call: Call<ResponModel>, t: Throwable) {
 
@@ -91,11 +91,9 @@ class KategoriKostKontrakanActivity : AppCompatActivity() {
                 }
             })
         }
-    }
 
-    fun filterKostKontrakanBantul(){
-        btBantul.setOnClickListener {
-            ApiConfig.instanceRetrofit.getKostKontrakanFiltBantul().enqueue(object :
+        btSlemanTahun.setOnClickListener {
+            ApiConfig.instanceRetrofit.getKostKontrakanFiltSlemanTahun().enqueue(object :
                 Callback<ResponModel> {
                 override fun onFailure(call: Call<ResponModel>, t: Throwable) {
 
@@ -109,11 +107,9 @@ class KategoriKostKontrakanActivity : AppCompatActivity() {
                 }
             })
         }
-    }
 
-    fun filterKostKontrakanGunungKidul(){
-        btGunungKidul.setOnClickListener {
-            ApiConfig.instanceRetrofit.getKostKontrakanFiltGunungKidul().enqueue(object :
+        btBantulBulan.setOnClickListener {
+            ApiConfig.instanceRetrofit.getKostKontrakanFiltSlemanBulan().enqueue(object :
                 Callback<ResponModel> {
                 override fun onFailure(call: Call<ResponModel>, t: Throwable) {
 
@@ -127,11 +123,73 @@ class KategoriKostKontrakanActivity : AppCompatActivity() {
                 }
             })
         }
-    }
 
-    fun filterKostKontrakanKotaYogyakarta(){
-        btKotaYogyakarta.setOnClickListener {
-            ApiConfig.instanceRetrofit.getKostKontrakanFiltKotaYoogyakarta().enqueue(object :
+        btBantulTahun.setOnClickListener {
+            ApiConfig.instanceRetrofit.getKostKontrakanFiltBantulTahun().enqueue(object :
+                Callback<ResponModel> {
+                override fun onFailure(call: Call<ResponModel>, t: Throwable) {
+
+                }
+
+                override fun onResponse(call: Call<ResponModel>, response: Response<ResponModel>) {
+                    val res = response.body()!!
+                    if (res.success == 1){
+                        displayKostkontrakan(res.kostkontrakans)
+                    }
+                }
+            })
+        }
+
+        btGunungKidulBulan.setOnClickListener {
+            ApiConfig.instanceRetrofit.getKostKontrakanFiltGunungKidulBulan().enqueue(object :
+                Callback<ResponModel> {
+                override fun onFailure(call: Call<ResponModel>, t: Throwable) {
+
+                }
+
+                override fun onResponse(call: Call<ResponModel>, response: Response<ResponModel>) {
+                    val res = response.body()!!
+                    if (res.success == 1){
+                        displayKostkontrakan(res.kostkontrakans)
+                    }
+                }
+            })
+        }
+
+        btGunungKidulTahun.setOnClickListener {
+            ApiConfig.instanceRetrofit.getKostKontrakanFiltGunungKidulTahun().enqueue(object :
+                Callback<ResponModel> {
+                override fun onFailure(call: Call<ResponModel>, t: Throwable) {
+
+                }
+
+                override fun onResponse(call: Call<ResponModel>, response: Response<ResponModel>) {
+                    val res = response.body()!!
+                    if (res.success == 1){
+                        displayKostkontrakan(res.kostkontrakans)
+                    }
+                }
+            })
+        }
+
+        btKotaYogyakartaBulan.setOnClickListener {
+            ApiConfig.instanceRetrofit.getKostKontrakanFiltKotaYoogyakartaBulan().enqueue(object :
+                Callback<ResponModel> {
+                override fun onFailure(call: Call<ResponModel>, t: Throwable) {
+
+                }
+
+                override fun onResponse(call: Call<ResponModel>, response: Response<ResponModel>) {
+                    val res = response.body()!!
+                    if (res.success == 1){
+                        displayKostkontrakan(res.kostkontrakans)
+                    }
+                }
+            })
+        }
+
+        btKotaYogyakartaTahun.setOnClickListener {
+            ApiConfig.instanceRetrofit.getKostKontrakanFiltKotaYoogyakartaTahun().enqueue(object :
                 Callback<ResponModel> {
                 override fun onFailure(call: Call<ResponModel>, t: Throwable) {
 
@@ -149,10 +207,7 @@ class KategoriKostKontrakanActivity : AppCompatActivity() {
 
     override fun onResume() {
         getKostkontrakan()
-        filterKostKontrakanSleman()
-        filterKostKontrakanBantul()
-        filterKostKontrakanGunungKidul()
-        filterKostKontrakanKotaYogyakarta()
+        filterKostKontrakan()
         super.onResume()
     }
 

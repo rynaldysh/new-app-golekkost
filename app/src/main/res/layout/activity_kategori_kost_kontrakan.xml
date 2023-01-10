@@ -22,48 +22,101 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="@dimen/_10sdp">
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/btSleman"
-                    android:layout_width="@dimen/_100sdp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="sleman"
-                    android:textStyle="bold"
-                    android:background="@drawable/tombol_bulat"
-                    android:layout_marginVertical="@dimen/_5sdp"
-                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btBantul"
-                    android:layout_width="@dimen/_100sdp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_5sdp"
-                    android:layout_marginVertical="@dimen/_5sdp"
-                    android:background="@drawable/tombol_bulat"
-                    android:text="Bantul"
-                    android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btSlemanTahun"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:text="sleman/Tahun"
+                        android:textStyle="bold"
+                        android:background="@drawable/tombol_bulat"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
 
-                <Button
-                    android:id="@+id/btKotaYogyakarta"
-                    android:layout_width="@dimen/_125sdp"
-                    android:layout_height="wrap_content"
-                    android:text="Kota Yogyakarta"
-                    android:textStyle="bold"
-                    android:background="@drawable/tombol_bulat"
-                    android:layout_marginVertical="@dimen/_5sdp"
-                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+                    <Button
+                        android:id="@+id/btBantulTahun"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@drawable/tombol_bulat"
+                        android:text="Bantul/Tahun"
+                        android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btGunungKidul"
-                    android:layout_width="@dimen/_120sdp"
+                    <Button
+                        android:id="@+id/btKotaYogyakartaTahun"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Kota Yogyakarta/Tahun"
+                        android:textStyle="bold"
+                        android:background="@drawable/tombol_bulat"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                    <Button
+                        android:id="@+id/btGunungKidulTahun"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Gunung Kidul/Tahun"
+                        android:textStyle="bold"
+                        android:background="@drawable/tombol_bulat"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Gunung Kidul"
-                    android:textStyle="bold"
-                    android:background="@drawable/tombol_bulat"
-                    android:layout_marginVertical="@dimen/_5sdp"
-                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btSlemanBulan"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:text="sleman/Bulan"
+                        android:textStyle="bold"
+                        android:background="@drawable/tombol_bulat"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                    <Button
+                        android:id="@+id/btBantulBulan"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@drawable/tombol_bulat"
+                        android:text="Bantul/Bulan"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btKotaYogyakartaBulan"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Kota Yogyakarta/Bulan"
+                        android:textStyle="bold"
+                        android:background="@drawable/tombol_bulat"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                    <Button
+                        android:id="@+id/btGunungKidulBulan"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Gunung Kidul/Bulan"
+                        android:textStyle="bold"
+                        android:background="@drawable/tombol_bulat"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
